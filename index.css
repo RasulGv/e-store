@@ -1,0 +1,43 @@
+.show{
+    border: none;
+}
+
+.products{
+    display:none
+}
+
+
+
+.products table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    border: 2px solid #ddd;
+}
+
+.products th,
+.products td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+.products th {
+    background-color: #f2f2f2;
+    color: #333;
+}
+
+.products tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.products tbody tr:hover {
+    background-color: #f2f2f2;
+}
+
+.container{
+    background-image: url(cafe.jpg);
+    height: 700px;
+   
+}
+
