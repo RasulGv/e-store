@@ -5,6 +5,7 @@ const sum_price = document.querySelector('.price')
 const showButton = document.querySelector('.show')
 const containerShow = document.querySelector(".container");
 const productShow=document.querySelector('.products')
+const totalPr=document.querySelector('.totalPr')
 
 let obj = {}
 let sum = 0
@@ -74,19 +75,20 @@ function removeItem(name){
 }
 function showProductDetails() {
     const productDetails = document.getElementById("productDetails");
-    productDetails.innerHTML = ""; 
-
-    
+    productDetails.innerHTML = "";
+    let totPr = 0;
     for (const [productName, productInfo] of Object.entries(obj)) {
-        const newRow = document.createElement("tr");
-        newRow.innerHTML = `
+      const newRow = document.createElement("tr");
+      newRow.innerHTML = `
             <td>${productName}</td>
             <td>${productInfo.price}$</td>
             <td>${productInfo.quantity}</td>
         `;
-        productDetails.appendChild(newRow);
+      productDetails.appendChild(newRow);
+      totPr += productInfo.price * productInfo.quantity;
     }
-}
+    totalPr.innerText = totPr;
+  }
+  showProductDetails();
 
 
-showProductDetails();
