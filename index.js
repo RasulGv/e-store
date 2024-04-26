@@ -117,7 +117,7 @@ function showProductDetails() {
   showProductDetails();
   
   function goBack() {
-    containerShow.style.display = "flex";
+    containerShow.style.display = "block";
     productShow.style.display = "none";
 }
 searchInput.addEventListener('input', () => {
